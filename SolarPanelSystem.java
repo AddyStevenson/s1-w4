@@ -1,19 +1,15 @@
 public class SolarPanelSystem{
     private double totalUsage;
     private double currentCharge;
-    private int totalCells;
-    private int numCellsOperating;
     private double batteryLifeHours = 100;
 
-    public SolarPanelSystem(double totalUsage, double currentCharge, int totalCells, int numCellsOperating) {
+    public SolarPanelSystem(double totalUsage, double currentCharge) {
         this.totalUsage = totalUsage;
         this.currentCharge = currentCharge;
-        this.totalCells = totalCells;
-        this.numCellsOperating = numCellsOperating;
     }
 
     public void sunShinning(double intensity, double duration){
-        this.currentCharge += intensity * duration;
+        this.currentCharge += intensity * duration / 30;
     }
 
     public void powerUse(double watts, double duration){
@@ -43,16 +39,7 @@ public class SolarPanelSystem{
         return currentCharge;
     }
 
-    public int getTotalCells() {
-        return totalCells;
-    }
-
-    public int getNumCellsOperating() {
-        return numCellsOperating;
-    }
-
     public double getBatteryLifeHours() {
         return batteryLifeHours;
     }
-
 }

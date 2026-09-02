@@ -25,4 +25,14 @@ public class StringExamples{
           System.out.println(n);
 
     } 
+    public void testStr(){
+      String s = "  Sean ";
+      String t = s.trim();
+      String lo = s.toLowerCase();
+      String up = s.toUpperCase();
+      System.out.println(t);
+      System.out.println(lo);
+      System.out.println(up);
+      System.out.println(s);
+    }
   }
